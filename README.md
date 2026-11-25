@@ -1,5 +1,7 @@
 # ZipRarBox (Android ZIP & RAR Archiver)
 
+**Author:** Mohamed Wael
+
 An Android application written in **Kotlin** and **Jetpack Compose (Material 3)** for compressing files into ZIP archives and inspecting/extracting ZIP and RAR archives using Android's Storage Access Framework (SAF).
 
 ## Features
@@ -26,3 +28,7 @@ An Android application written in **Kotlin** and **Jetpack Compose (Material 3)*
 1. Unzip `ZipRarBox-Android.zip` and push the contents of the `ZipRarBox` folder (including `.github/workflows/build-apk.yml`) to a GitHub repository.
 2. Open the **Actions** tab in your repository and click the **Build Debug APK** workflow run (or trigger it manually with **Run workflow**).
 3. Once it finishes, download **ZipRarBox-debug-apk** from the **Artifacts** section at the bottom of the run page and install `app-debug.apk` on your Android device.
+
+### Release APK Signing
+
+The GitHub Actions workflow (`Build Signed Release APK`) automatically signs `app-release.apk` with a release keystore issued to **Mohamed Wael** (or uses your permanent keystore if you configure the optional repository secrets `KEYSTORE_BASE64`, `KEYSTORE_PASSWORD`, `KEY_ALIAS`, and `KEY_PASSWORD`).

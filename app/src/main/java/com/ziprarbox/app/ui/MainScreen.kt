@@ -107,7 +107,14 @@ fun MainScreen(viewModel: ArchiveViewModel) {
                             tint = MaterialTheme.colorScheme.primary
                         )
                         Spacer(modifier = Modifier.width(10.dp))
-                        Text("ZipRarBox", fontWeight = FontWeight.SemiBold)
+                        Column {
+                            Text("ZipRarBox", fontWeight = FontWeight.SemiBold)
+                            Text(
+                                text = "by Mohamed Wael",
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        }
                     }
                 }
             )
@@ -315,7 +322,7 @@ private fun CompressPane(
         if (state.selectedFilesToCompress.isEmpty()) {
             item {
                 Text(
-                    text = "No files selected yet. Tap \"Add Files\" to pick documents, photos, or other files to compress.",
+                    text = "No files selected yet. Tap 'Add Files' to pick documents, photos, or other files to compress.",
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     modifier = Modifier.padding(top = 8.dp)

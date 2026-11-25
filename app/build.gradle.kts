@@ -21,15 +21,15 @@ android {
         }
     }
 
-    signingConfigs {
+signingConfigs {
         create("release") {
-            val keystorePath = System.getenv("KEYSTORE_FILE") ?: "release-keystore.jks"
+            val keystorePath = System.getenv("KEYSTORE_FILE")?.ifBlank { null } ?: "release-keystore.jks"
             val keystoreFile = rootProject.file(keystorePath)
             if (keystoreFile.exists()) {
                 storeFile = keystoreFile
-                storePassword = System.getenv("KEYSTORE_PASSWORD") ?: "ZipRarBox2026!"
-                keyAlias = System.getenv("KEY_ALIAS") ?: "mohamedwael"
-                keyPassword = System.getenv("KEY_PASSWORD") ?: "ZipRarBox2026!"
+                storePassword = System.getenv("KEYSTORE_PASSWORD")?.ifBlank { null } ?: "ZipRarBox2026!"
+                keyAlias = System.getenv("KEY_ALIAS")?.ifBlank { null } ?: "mohamedwael"
+                keyPassword = System.getenv("KEY_PASSWORD")?.ifBlank { null } ?: "ZipRarBox2026!"
             }
         }
     }

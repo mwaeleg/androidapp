@@ -315,7 +315,7 @@ private fun CompressPane(
         if (state.selectedFilesToCompress.isEmpty()) {
             item {
                 Text(
-                    text = "No files selected yet. Tap "Add Files" to pick documents, photos, or other files to compress.",
+                    text = "No files selected yet. Tap \"Add Files\" to pick documents, photos, or other files to compress.",
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     modifier = Modifier.padding(top = 8.dp)
